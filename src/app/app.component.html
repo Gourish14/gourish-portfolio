@@ -43,7 +43,7 @@
       </div>
     </section>
 
-    <section id="experience" class="section experience"><div class="section-kicker">02 / EXPERIENCE</div><div class="section-heading"><h2>Where I've<br><span>made impact.</span></h2></div><div class="timeline"><article class="timeline-item" *ngFor="let job of experience"><div class="timeline-marker"></div><div class="timeline-meta"><span>{{job.period}}</span><strong>{{job.company}}</strong></div><div class="timeline-content"><h3>{{job.role}}</h3><ul><li *ngFor="let bullet of job.bullets">{{bullet}}</li></ul></div></article></div><div class="impact-strip"><div><strong>50%</strong><span>less deployment downtime</span></div><div><strong>50%</strong><span>less manual monitoring effort</span></div><div><strong>10</strong><span>member Agile/Scrum team</span></div></div></section>
+    <section id="experience" class="section experience"><div class="section-kicker">02 / EXPERIENCE</div><div class="section-heading"><h2>Where I've<br><span>made impact.</span></h2></div><div class="timeline"><article class="timeline-item" *ngFor="let job of experience"><div class="timeline-meta"><span>{{job.period}}</span><strong>{{job.company}}</strong></div><div class="timeline-marker"></div><div class="timeline-content"><h3>{{job.role}}</h3><ul><li *ngFor="let bullet of job.bullets">{{bullet}}</li></ul></div></article></div><div class="impact-strip"><div><strong>50%</strong><span>less deployment downtime</span></div><div><strong>50%</strong><span>less manual monitoring effort</span></div><div><strong>10</strong><span>member Agile/Scrum team</span></div></div></section>
 
     <section id="skills" class="section"><div class="section-kicker">03 / TOOLKIT</div><div class="section-heading"><h2>The stack behind<br><span>the work.</span></h2></div><div class="skill-grid"><article class="skill-card" *ngFor="let group of skills"><h3>{{group.title}}</h3><div class="chips"><span *ngFor="let item of group.items">{{item}}</span></div></article></div></section>
 
@@ -54,17 +54,20 @@
   <footer><span>© 2026 Gourish Bhagat</span><span>Code · Build · Learn · Grow</span><span>Built with Angular</span></footer>
 
   <style>
-    /* Experience timeline: metadata stays completely on the left of the divider. */
+    /* Experience timeline: metadata is the first grid column, divider/marker is the second. */
     @media (min-width: 901px) {
       .page .timeline:before { left: 260px; }
-      .page .timeline-item { grid-template-columns: 240px 40px minmax(0, 1fr); gap: 20px; }
+      .page .timeline-item { grid-template-columns: 240px 40px minmax(0, 1fr); gap: 20px; align-items: start; }
       .page .timeline-meta {
+        grid-column: 1;
         text-align: left;
         align-items: flex-start;
         padding: 0;
         gap: 8px;
+        min-width: 0;
       }
       .page .timeline-meta span {
+        display: block;
         white-space: nowrap;
         line-height: 1.45;
         color: var(--muted-2);
@@ -74,7 +77,15 @@
         font-size: 14px;
         line-height: 1.4;
         color: var(--heading);
-        max-width: 240px;
+        max-width: 220px;
+      }
+      .page .timeline-marker {
+        grid-column: 2;
+        margin: 4px auto;
+      }
+      .page .timeline-content {
+        grid-column: 3;
+        padding-left: 8px;
       }
     }
   </style>
