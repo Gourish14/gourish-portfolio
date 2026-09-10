@@ -1,0 +1,42 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "gourish-portfolio": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "",
+      "sourceRoot": "src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular/build:application",
+          "options": {
+            "outputPath": "dist/gourish-portfolio",
+            "index": "src/index.html",
+            "browser": "src/main.ts",
+            "polyfills": ["zone.js"],
+            "tsConfig": "tsconfig.app.json",
+            "assets": ["src/favicon.svg"],
+            "styles": ["src/styles.css"],
+            "outputMode": "static"
+          },
+          "configurations": {
+            "production": {"optimization": true, "outputHashing": "all"},
+            "development": {"optimization": false, "sourceMap": true}
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular/build:dev-server",
+          "configurations": {
+            "production": {"buildTarget": "gourish-portfolio:build:production"},
+            "development": {"buildTarget": "gourish-portfolio:build:development"}
+          },
+          "defaultConfiguration": "development"
+        }
+      }
+    }
+  }
+}
