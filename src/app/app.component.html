@@ -71,5 +71,48 @@
     .page .cert-list .sql-cert .cert-link { color:var(--muted)!important; }
     .page .cert-list .sql-cert .cert-link:hover,.page .cert-list .sql-cert .cert-link:focus-visible { color:var(--accent)!important; transform:translateY(-3px); }
     .page .subheading { font-size:22px !important; }
+
+    /* Softer, premium light theme — warm-cool surfaces instead of plain white. */
+    .page.light-theme {
+      --accent:#0b7f9f;
+      --bg:#eaf1f5;
+      --surface:#f6f9fb;
+      --surface-2:#edf4f7;
+      --surface-3:#e3edf2;
+      --text:#263b49;
+      --heading:#102735;
+      --muted:#536b79;
+      --muted-2:#617987;
+      --border:#c9d8df;
+      --border-strong:#aebfc9;
+      --nav-bg:rgba(234,241,245,.88);
+      --shadow:rgba(31,62,77,.16);
+      background:
+        radial-gradient(circle at 88% 8%,rgba(11,127,159,.12),transparent 25rem),
+        radial-gradient(circle at 8% 42%,rgba(74,107,133,.08),transparent 28rem),
+        linear-gradient(180deg,#edf4f7 0%,#e8f0f4 48%,#eef3f6 100%);
+    }
+    .page.light-theme .hero-grid {
+      opacity:.42;
+      background-image:linear-gradient(rgba(38,76,94,.075) 1px,transparent 1px),linear-gradient(90deg,rgba(38,76,94,.075) 1px,transparent 1px);
+    }
+    .page.light-theme .about-card,
+    .page.light-theme .skill-card,
+    .page.light-theme .impact-strip div {
+      background:linear-gradient(145deg,#f8fbfc,#eaf2f5);
+      box-shadow:0 10px 28px rgba(31,62,77,.045);
+    }
+    .page.light-theme .about-card.featured {
+      background:linear-gradient(145deg,rgba(11,127,159,.12),#f3f8fa);
+    }
+    .page.light-theme .code-window,
+    .page.light-theme .floating-tag {
+      box-shadow:0 25px 60px rgba(31,62,77,.13);
+    }
+    .page.light-theme .primary { color:#f5fbfd; }
+    .page.light-theme .secondary { background:rgba(246,249,251,.5); }
+    .page.light-theme .contact-panel {
+      background:radial-gradient(circle at 90% 20%,rgba(11,127,159,.14),transparent 38%),linear-gradient(145deg,#eef5f7,#e2edf2);
+    }
   </style>
 </div>
