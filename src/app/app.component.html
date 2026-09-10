@@ -105,5 +105,27 @@
       }
       .page .timeline-content h3 { margin-top: 0 !important; }
     }
+
+    /* Certification interactions: only the certificate targets behave like links. */
+    .page .cert-link {
+      display: inline-block;
+      color: var(--muted);
+      cursor: pointer;
+      transition: color .2s ease, transform .2s ease;
+      text-decoration: none;
+    }
+    .page .cert-link:hover,
+    .page .cert-link:focus-visible {
+      color: var(--accent);
+      transform: translateY(-3px);
+      outline: none;
+    }
+    .page .sql-cert { color: var(--muted); }
+    .page .sql-cert .cert-link { color: var(--accent); }
+    .page .sql-cert .cert-link:hover,
+    .page .sql-cert .cert-link:focus-visible {
+      color: var(--accent);
+      transform: translateY(-3px);
+    }
   </style>
 </div>
