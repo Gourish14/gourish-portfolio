@@ -43,15 +43,8 @@ export class AppComponent {
     { name: 'Angular – The Complete Guide — Udemy', url: 'https://www.udemy.com/certificate/UC-edf9b7eb-0019-4b87-a400-c8342a8f4509/' },
     { name: 'Generative AI Fundamentals — Databricks', url: 'https://credentials.databricks.com/a5029c4a-54c6-42d2-a92c-11d330558832' },
     { name: 'Claude 101 — Anthropic', url: 'https://verify.skilljar.com/c/2x7c3jznswfm' },
-    { name: 'AI Fluency Framework & Foundations — Anthropic', url: 'https://verify.skilljar.com/c/pnqp46zhptg3' },
-    { name: 'SQL — Basic, Intermediate & Advanced — HackerRank', url: 'https://www.hackerrank.com/certificates/c97a4824760e' }
+    { name: 'AI Fluency Framework & Foundations — Anthropic', url: 'https://verify.skilljar.com/c/pnqp46zhptg3' }
   ];
-
-  readonly sqlCertificates = {
-    basic: 'https://www.hackerrank.com/certificates/c97a4824760e',
-    intermediate: 'https://www.hackerrank.com/certificates/b6b0392fd1dd',
-    advanced: 'https://www.hackerrank.com/certificates/65863bdec608'
-  };
 
   toggleTheme(): void {
     this.lightMode = !this.lightMode;
