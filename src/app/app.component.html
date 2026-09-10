@@ -52,4 +52,21 @@
     <section class="section contact"><div class="contact-panel"><div class="section-kicker">05 / LET'S CONNECT</div><h2>Have an idea?<br><span>Let's build it.</span></h2><p>Open to interesting engineering problems, full-stack opportunities and conversations around modern software development.</p><a class="primary large" href="mailto:gourishbhagat01@gmail.com">gourishbhagat01@gmail.com ↗</a><div class="contact-links"><a href="https://github.com/Gourish14" target="_blank" rel="noopener">GitHub ↗</a><a href="https://www.linkedin.com/in/gourish-bhagat-4725061a9/" target="_blank" rel="noopener">LinkedIn ↗</a></div></div></section>
   </main>
   <footer><span>© 2026 Gourish Bhagat</span><span>Code · Build · Learn · Grow</span><span>Built with Angular</span></footer>
+
+  <style>
+    /* Experience timeline: give the company/date column enough room to breathe. */
+    @media (min-width: 901px) {
+      .page .timeline { --timeline-meta-width: 210px; }
+      .page .timeline:before { left: 230px; }
+      .page .timeline-item { grid-template-columns: 210px 40px minmax(0, 1fr); gap: 20px; }
+      .page .timeline-meta { padding-right: 4px; }
+      .page .timeline-meta strong {
+        font-size: 13px;
+        line-height: 1.35;
+        color: var(--heading);
+        max-width: 205px;
+      }
+      .page .timeline-meta span { line-height: 1.45; }
+    }
+  </style>
 </div>
