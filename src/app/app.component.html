@@ -1,9 +1,10 @@
-<div class="page">
+<div class="page" [class.light-theme]="lightMode">
   <nav class="nav"><div class="nav-inner">
     <button class="brand" (click)="scrollTo('home')"><span class="brand-mark">&lt;/&gt;</span><span>Gourish<span class="accent">.</span></span></button>
     <button class="menu-toggle" (click)="menuOpen=!menuOpen" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
     <div class="nav-links" [class.open]="menuOpen">
       <button (click)="scrollTo('about')">About</button><button (click)="scrollTo('experience')">Experience</button><button (click)="scrollTo('skills')">Skills</button><button (click)="scrollTo('credentials')">Credentials</button>
+      <button class="theme-toggle" (click)="toggleTheme()" [attr.aria-label]="lightMode ? 'Switch to dark mode' : 'Switch to light mode'"><span>{{lightMode ? '☾' : '☀'}}</span><span>{{lightMode ? 'Dark' : 'Light'}}</span></button>
       <a class="nav-cta" href="mailto:gourishbhagat01@gmail.com">Let's Talk ↗</a>
     </div>
   </div></nav>
