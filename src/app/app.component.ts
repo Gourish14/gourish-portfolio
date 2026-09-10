@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 interface SkillGroup { title: string; items: string[]; }
 interface Experience { role: string; company: string; period: string; bullets: string[]; }
+interface Certification { name: string; url: string; }
 
 @Component({
   selector: 'app-root', standalone: true, imports: [CommonModule],
@@ -36,7 +37,21 @@ export class AppComponent {
   }];
 
   readonly education = { degree: 'B.Tech in Electronics & Communication Engineering', institute: 'Silicon Institute of Technology, Sambalpur, Odisha', period: '2019 — 2023', score: 'CGPA 9.13' };
-  readonly certifications = ['Java Programming Master Class for Software Developers — Udemy','Angular – The Complete Guide — Udemy','Generative AI Fundamentals — Databricks','Claude 101 — Anthropic','AI Fluency Framework & Foundations — Anthropic','SQL — Basic, Intermediate & Advanced — HackerRank'];
+
+  readonly certifications: Certification[] = [
+    { name: 'Java Programming Master Class for Software Developers — Udemy', url: 'https://www.udemy.com/certificate/UC-1b70ee1f-f51c-43c2-9c21-35b96156cdd3/' },
+    { name: 'Angular – The Complete Guide — Udemy', url: 'https://www.udemy.com/certificate/UC-edf9b7eb-0019-4b87-a400-c8342a8f4509/' },
+    { name: 'Generative AI Fundamentals — Databricks', url: 'https://credentials.databricks.com/a5029c4a-54c6-42d2-a92c-11d330558832' },
+    { name: 'Claude 101 — Anthropic', url: 'https://verify.skilljar.com/c/2x7c3jznswfm' },
+    { name: 'AI Fluency Framework & Foundations — Anthropic', url: 'https://verify.skilljar.com/c/pnqp46zhptg3' },
+    { name: 'SQL — Basic, Intermediate & Advanced — HackerRank', url: 'https://www.hackerrank.com/certificates/c97a4824760e' }
+  ];
+
+  readonly sqlCertificates = {
+    basic: 'https://www.hackerrank.com/certificates/c97a4824760e',
+    intermediate: 'https://www.hackerrank.com/certificates/b6b0392fd1dd',
+    advanced: 'https://www.hackerrank.com/certificates/65863bdec608'
+  };
 
   toggleTheme(): void {
     this.lightMode = !this.lightMode;
