@@ -1,0 +1,45 @@
+<div class="page">
+  <nav class="nav"><div class="nav-inner">
+    <button class="brand" (click)="scrollTo('home')"><span class="brand-mark">&lt;/&gt;</span><span>Gourish<span class="accent">.</span></span></button>
+    <button class="menu-toggle" (click)="menuOpen=!menuOpen" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+    <div class="nav-links" [class.open]="menuOpen">
+      <button (click)="scrollTo('about')">About</button><button (click)="scrollTo('experience')">Experience</button><button (click)="scrollTo('skills')">Skills</button><button (click)="scrollTo('credentials')">Credentials</button>
+      <a class="nav-cta" href="mailto:gourishbhagat01@gmail.com">Let's Talk ↗</a>
+    </div>
+  </div></nav>
+
+  <main>
+    <section id="home" class="hero section">
+      <div class="hero-grid"></div><div class="hero-copy">
+        <div class="eyebrow"><span class="pulse"></span> FULL STACK SOFTWARE DEVELOPER</div>
+        <h1>Building <span>scalable</span><br>solutions for<br>a better tomorrow.</h1>
+        <p class="hero-lead">Java · Spring Boot · Angular · AWS · Microservices · AI/LLM</p>
+        <p class="hero-text">I build production-ready web applications across the backend, frontend and cloud — with a growing focus on practical Generative AI and LLM-powered development.</p>
+        <div class="hero-actions"><button class="primary" (click)="scrollTo('experience')">Explore my work ↘</button><a class="secondary" href="https://www.linkedin.com/in/gourish-bhagat-4725061a9/" target="_blank" rel="noopener">LinkedIn ↗</a></div>
+      </div>
+      <div class="hero-visual" aria-hidden="true"><div class="orb orb-a"></div><div class="orb orb-b"></div><div class="code-window"><div class="window-bar"><i></i><i></i><i></i><span>gourish.java</span></div><pre><span class="kw">public class</span> <span class="type">Gourish</span> {
+  <span class="kw">private final</span> String role = <span class="str">"Full Stack Developer"</span>;
+  <span class="kw">void</span> <span class="fn">build</span>() {
+    java + springBoot;
+    angular + typescript;
+    aws + microservices;
+    ai + llm;
+  }
+}</pre></div><div class="floating-tag tag-java">JAVA</div><div class="floating-tag tag-aws">AWS</div><div class="floating-tag tag-ai">AI / LLM</div></div>
+      <div class="scroll-hint"><span></span> SCROLL TO EXPLORE</div>
+    </section>
+
+    <section id="about" class="section"><div class="section-kicker">01 / ABOUT</div><div class="section-heading"><h2>Engineering with<br><span>purpose.</span></h2><p>From APIs to pixels to cloud infrastructure, I enjoy owning the complete journey from idea to production.</p></div>
+      <div class="about-grid"><div class="about-card featured"><span class="card-number">3+</span><span class="card-label">YEARS EXPERIENCE</span><p>Building scalable full-stack applications and production features.</p></div><div class="about-card"><span class="card-icon">⚡</span><h3>Performance</h3><p>Efficient data processing, optimized queries and reliable application delivery.</p></div><div class="about-card"><span class="card-icon">☁</span><h3>Cloud Native</h3><p>Hands-on AWS experience across compute, storage, messaging, monitoring and CI/CD.</p></div><div class="about-card"><span class="card-icon">✦</span><h3>AI Forward</h3><p>Exploring Generative AI, LLM integration and AI-assisted software development.</p></div></div>
+    </section>
+
+    <section id="experience" class="section experience"><div class="section-kicker">02 / EXPERIENCE</div><div class="section-heading"><h2>Where I've<br><span>made impact.</span></h2></div><div class="timeline"><article class="timeline-item" *ngFor="let job of experience"><div class="timeline-marker"></div><div class="timeline-meta"><span>{{job.period}}</span><strong>{{job.company}}</strong></div><div class="timeline-content"><h3>{{job.role}}</h3><ul><li *ngFor="let bullet of job.bullets">{{bullet}}</li></ul></div></article></div><div class="impact-strip"><div><strong>50%</strong><span>less deployment downtime</span></div><div><strong>50%</strong><span>less manual monitoring effort</span></div><div><strong>10</strong><span>member Agile/Scrum team</span></div></div></section>
+
+    <section id="skills" class="section"><div class="section-kicker">03 / TOOLKIT</div><div class="section-heading"><h2>The stack behind<br><span>the work.</span></h2></div><div class="skill-grid"><article class="skill-card" *ngFor="let group of skills"><h3>{{group.title}}</h3><div class="chips"><span *ngFor="let item of group.items">{{item}}</span></div></article></div></section>
+
+    <section id="credentials" class="section credentials"><div class="section-kicker">04 / CREDENTIALS</div><div class="credentials-grid"><div><h2>Learning never<br><span>stops.</span></h2><div class="education"><div class="edu-dot"></div><div><span>{{education.period}}</span><h3>{{education.degree}}</h3><p>{{education.institute}}</p><b>{{education.score}}</b></div></div></div><div><h3 class="subheading">Certifications</h3><ul class="cert-list"><li *ngFor="let cert of certifications"><span>↗</span>{{cert}}</li></ul></div></div></section>
+
+    <section class="section contact"><div class="contact-panel"><div class="section-kicker">05 / LET'S CONNECT</div><h2>Have an idea?<br><span>Let's build it.</span></h2><p>Open to interesting engineering problems, full-stack opportunities and conversations around modern software development.</p><a class="primary large" href="mailto:gourishbhagat01@gmail.com">gourishbhagat01@gmail.com ↗</a><div class="contact-links"><a href="https://github.com/Gourish14" target="_blank" rel="noopener">GitHub ↗</a><a href="https://www.linkedin.com/in/gourish-bhagat-4725061a9/" target="_blank" rel="noopener">LinkedIn ↗</a></div></div></section>
+  </main>
+  <footer><span>© 2026 Gourish Bhagat</span><span>Code · Build · Learn · Grow</span><span>Built with Angular</span></footer>
+</div>
