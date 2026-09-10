@@ -54,19 +54,26 @@
   <footer><span>© 2026 Gourish Bhagat</span><span>Code · Build · Learn · Grow</span><span>Built with Angular</span></footer>
 
   <style>
-    /* Experience timeline: give the company/date column enough room to breathe. */
+    /* Experience timeline: date + company stay together on the left of the divider. */
     @media (min-width: 901px) {
-      .page .timeline { --timeline-meta-width: 210px; }
-      .page .timeline:before { left: 230px; }
-      .page .timeline-item { grid-template-columns: 210px 40px minmax(0, 1fr); gap: 20px; }
-      .page .timeline-meta { padding-right: 4px; }
-      .page .timeline-meta strong {
-        font-size: 13px;
-        line-height: 1.35;
-        color: var(--heading);
-        max-width: 205px;
+      .page .timeline:before { left: 300px; }
+      .page .timeline-item { grid-template-columns: 280px 40px minmax(0, 1fr); gap: 20px; }
+      .page .timeline-meta {
+        justify-content: flex-start;
+        text-align: left;
+        padding-right: 10px;
+        gap: 7px;
       }
-      .page .timeline-meta span { line-height: 1.45; }
+      .page .timeline-meta span {
+        color: var(--muted-2);
+        font: 500 13px/1.4 'JetBrains Mono';
+        white-space: nowrap;
+      }
+      .page .timeline-meta strong {
+        color: var(--heading);
+        font: 700 15px/1.4 'Inter','Segoe UI',Arial,sans-serif;
+        max-width: 270px;
+      }
     }
   </style>
 </div>
