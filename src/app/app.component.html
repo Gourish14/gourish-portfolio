@@ -47,85 +47,28 @@
 
     <section id="skills" class="section"><div class="section-kicker">03 / TOOLKIT</div><div class="section-heading"><h2>The stack behind<br><span>the work.</span></h2></div><div class="skill-grid"><article class="skill-card" *ngFor="let group of skills"><h3>{{group.title}}</h3><div class="chips"><span *ngFor="let item of group.items">{{item}}</span></div></article></div></section>
 
-    <section id="credentials" class="section credentials"><div class="section-kicker">04 / CREDENTIALS</div><div class="credentials-grid"><div><h2>Learning never<br><span>stops.</span></h2><div class="education"><div class="edu-dot"></div><div><span>{{education.period}}</span><h3>{{education.degree}}</h3><p>{{education.institute}}</p><b>{{education.score}}</b></div></div></div><div><h3 class="subheading">Certifications</h3><ul class="cert-list"><li *ngFor="let cert of certifications; let i = index"><span>↗</span><a class="cert-link" [href]="cert.url" target="_blank" rel="noopener">{{cert.name}}</a></li><li><span>↗</span><span class="sql-cert"><span>SQL — </span><a class="cert-link" href="https://www.hackerrank.com/certificates/c97a4824760e" target="_blank" rel="noopener">Basic</a><span>, </span><a class="cert-link" href="https://www.hackerrank.com/certificates/b6b0392fd1dd" target="_blank" rel="noopener">Intermediate</a><span> &amp; </span><a class="cert-link" href="https://www.hackerrank.com/certificates/65863bdec608" target="_blank" rel="noopener">Advanced</a><span> — HackerRank</span></span></li></ul></div></div></section>
+    <section id="credentials" class="section credentials"><div class="section-kicker">04 / CREDENTIALS</div><div class="section-heading"><h2>Learning never<br><span>stops.</span></h2></div><div class="credentials-grid"><div><div class="education"><div class="edu-dot"></div><div><span>{{education.period}}</span><h3>{{education.degree}}</h3><p>{{education.institute}}</p><b>{{education.score}}</b></div></div></div><div><h3 class="subheading">Certifications</h3><ul class="cert-list"><li *ngFor="let cert of certifications"><span class="cert-arrow">↗</span><a class="cert-link" [href]="cert.url" target="_blank" rel="noopener">{{cert.name}}</a></li><li><span class="cert-arrow">↗</span><span class="sql-cert">SQL — <a class="cert-link" href="https://www.hackerrank.com/certificates/c97a4824760e" target="_blank" rel="noopener">Basic</a>, <a class="cert-link" href="https://www.hackerrank.com/certificates/b6b0392fd1dd" target="_blank" rel="noopener">Intermediate</a> &amp; <a class="cert-link" href="https://www.hackerrank.com/certificates/65863bdec608" target="_blank" rel="noopener">Advanced</a> — HackerRank</span></li></ul></div></div></section>
 
     <section class="section contact"><div class="contact-panel"><div class="section-kicker">05 / LET'S CONNECT</div><h2>Have an idea?<br><span>Let's build it.</span></h2><p>Open to interesting engineering problems, full-stack opportunities and conversations around modern software development.</p><a class="primary large" href="mailto:gourishbhagat01@gmail.com">gourishbhagat01@gmail.com ↗</a><div class="contact-links"><a href="https://github.com/Gourish14" target="_blank" rel="noopener">GitHub ↗</a><a href="https://www.linkedin.com/in/gourish-bhagat-4725061a9/" target="_blank" rel="noopener">LinkedIn ↗</a></div></div></section>
   </main>
   <footer><span>© 2026 Gourish Bhagat</span><span>Code · Build · Learn · Grow</span><span>Built with Angular</span></footer>
 
   <style>
-    /* Desktop: metadata is clearly left of the divider with a deliberate visual gap. */
     @media (min-width: 901px) {
       .page .timeline:before { left: 300px !important; }
-      .page .timeline-item {
-        display: grid !important;
-        grid-template-columns: 230px 20px minmax(0, 1fr) !important;
-        column-gap: 40px !important;
-        align-items: start !important;
-      }
-      .page .timeline-meta {
-        grid-column: 1 !important;
-        grid-row: 1 !important;
-        width: 230px !important;
-        min-width: 230px !important;
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: flex-start !important;
-        justify-content: flex-start !important;
-        text-align: left !important;
-        gap: 8px !important;
-        padding: 0 !important;
-        margin: 0 !important;
-      }
-      .page .timeline-meta span {
-        display: block !important;
-        white-space: nowrap !important;
-        font: 600 13px/1.5 'JetBrains Mono', monospace !important;
-        color: var(--muted-2) !important;
-      }
-      .page .timeline-meta strong {
-        display: block !important;
-        width: 100% !important;
-        max-width: 230px !important;
-        color: var(--heading) !important;
-        font: 700 15px/1.45 'Inter','Segoe UI',Arial,sans-serif !important;
-        text-align: left !important;
-      }
-      .page .timeline-marker {
-        grid-column: 2 !important;
-        grid-row: 1 !important;
-        margin: 4px auto !important;
-      }
-      .page .timeline-content {
-        grid-column: 3 !important;
-        grid-row: 1 !important;
-        min-width: 0 !important;
-        padding-left: 0 !important;
-        margin-left: 0 !important;
-      }
-      .page .timeline-content h3 { margin-top: 0 !important; }
+      .page .timeline-item { display:grid!important; grid-template-columns:230px 20px minmax(0,1fr)!important; column-gap:40px!important; align-items:start!important; }
+      .page .timeline-meta { grid-column:1!important; grid-row:1!important; width:230px!important; min-width:230px!important; display:flex!important; flex-direction:column!important; align-items:flex-start!important; text-align:left!important; gap:8px!important; padding:0!important; margin:0!important; }
+      .page .timeline-meta span { display:block!important; white-space:nowrap!important; font:600 13px/1.5 'JetBrains Mono',monospace!important; color:var(--muted-2)!important; }
+      .page .timeline-meta strong { display:block!important; width:100%!important; max-width:230px!important; color:var(--heading)!important; font:700 15px/1.45 'Inter','Segoe UI',Arial,sans-serif!important; text-align:left!important; }
+      .page .timeline-marker { grid-column:2!important; grid-row:1!important; margin:4px auto!important; }
+      .page .timeline-content { grid-column:3!important; grid-row:1!important; min-width:0!important; padding-left:0!important; margin-left:0!important; }
+      .page .timeline-content h3 { margin-top:0!important; }
     }
-
-    /* Certification interactions: only the certificate targets behave like links. */
-    .page .cert-link {
-      display: inline-block;
-      color: var(--muted);
-      cursor: pointer;
-      transition: color .2s ease, transform .2s ease;
-      text-decoration: none;
-    }
-    .page .cert-link:hover,
-    .page .cert-link:focus-visible {
-      color: var(--accent);
-      transform: translateY(-3px);
-      outline: none;
-    }
-    .page .sql-cert { color: var(--muted); }
-    .page .sql-cert .cert-link { color: var(--accent); }
-    .page .sql-cert .cert-link:hover,
-    .page .sql-cert .cert-link:focus-visible {
-      color: var(--accent);
-      transform: translateY(-3px);
-    }
+    .page .cert-list .cert-arrow { color:var(--accent); flex:none; }
+    .page .cert-list .cert-link { display:inline-block; color:var(--muted); cursor:pointer; transition:color .2s ease,transform .2s ease; text-decoration:none; }
+    .page .cert-list .cert-link:hover,.page .cert-list .cert-link:focus-visible { color:var(--accent); transform:translateY(-3px); outline:none; }
+    .page .cert-list .sql-cert { color:var(--muted)!important; }
+    .page .cert-list .sql-cert .cert-link { color:var(--muted)!important; }
+    .page .cert-list .sql-cert .cert-link:hover,.page .cert-list .sql-cert .cert-link:focus-visible { color:var(--accent)!important; transform:translateY(-3px); }
   </style>
 </div>
