@@ -10,6 +10,12 @@ interface Experience { role: string; company: string; period: string; bullets: s
 })
 export class AppComponent {
   menuOpen = false;
+  lightMode = false;
+
+  constructor() {
+    this.lightMode = localStorage.getItem('portfolio-theme') === 'light';
+  }
+
   readonly skills: SkillGroup[] = [
     { title: 'Backend', items: ['Java','Spring Boot','Spring MVC','Spring REST','Spring Security','Hibernate','JPA','Microservices'] },
     { title: 'Frontend', items: ['Angular 14+','TypeScript','JavaScript','HTML5','SCSS/CSS3','PrimeNG','Mapbox GL JS'] },
@@ -17,6 +23,7 @@ export class AppComponent {
     { title: 'Data & Quality', items: ['MySQL','MS SQL Server','JPA Specifications','Native SQL','JUnit','Postman','Performance Optimization'] },
     { title: 'AI & Modern Development', items: ['Generative AI','LLM Integration','AI-Assisted Development','GitHub Copilot','Claude Code'] }
   ];
+
   readonly experience: Experience[] = [{
     role: 'Full Stack Software Developer', company: 'Cozentus Technologies Private Limited', period: 'Jul 2023 — Present',
     bullets: [
@@ -27,8 +34,15 @@ export class AppComponent {
       'Collaborated in a 10-member Agile/Scrum team across development, code reviews, testing, debugging and production releases.'
     ]
   }];
+
   readonly education = { degree: 'B.Tech in Electronics & Communication Engineering', institute: 'Silicon Institute of Technology, Sambalpur, Odisha', period: '2019 — 2023', score: 'CGPA 9.13' };
   readonly certifications = ['Java Programming Master Class for Software Developers — Udemy','Angular – The Complete Guide — Udemy','Generative AI Fundamentals — Databricks','Claude 101 — Anthropic','AI Fluency Framework & Foundations — Anthropic','SQL — Basic, Intermediate & Advanced — HackerRank'];
+
+  toggleTheme(): void {
+    this.lightMode = !this.lightMode;
+    localStorage.setItem('portfolio-theme', this.lightMode ? 'light' : 'dark');
+  }
+
   @HostListener('window:scroll') onScroll(): void { document.querySelector('.nav')?.classList.toggle('scrolled', window.scrollY > 30); }
   scrollTo(id: string): void { this.menuOpen = false; document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
 }
